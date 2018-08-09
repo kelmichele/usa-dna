@@ -55,10 +55,10 @@
 							<% if location.addr2 %><%= location.addr2.titleize %><br><% end %>
 							<%= location.town.townname %>, <%= location.state.abv %> <%= location.zip %>
 						</h4>
-						<% if user_signed_in? && current_user.admin? %>
+
 							<% if location.longitude == nil %>**<small>Coordinates Missing**</small><% end %>
 							<div class="actions"><small><%= link_to("Edit Location (#{location.id})", edit_location_path(location)) %></small></div>
-						<% end %>
+
 					</div>
 				<% end %>
 				</table>
