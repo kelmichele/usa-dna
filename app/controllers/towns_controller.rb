@@ -1,7 +1,5 @@
 class TownsController < ApplicationController
 	before_action :set_town, only: [:edit, :update, :destroy, :show]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :require_admin, except: [:index, :show]
 
 	def index
 		@towns = Town.all
@@ -23,8 +21,8 @@ class TownsController < ApplicationController
 		town_locations = @town.locations.all
 
 		@starter = town_locations.first
-		# @town_lat = town_locations.average(:latitude)
-		# @town_lng = town_locations.average(:longitude)
+		@town_lat = town_locations.average(:latitude)
+		@town_lng = town_locations.average(:longitude)
 		@town_cors = @town_lat, @town_lng
 
 		@locations = if params[:l]
@@ -76,19 +74,10 @@ class TownsController < ApplicationController
 
 	private
 		def set_town
-			# @town = Town.find(params[:id])
-			# @town = Town.find_by slug: params[:id]
 			@town = Town.friendly.find(params[:id])
 		end
 
 		def town_params
       params.require(:town).permit(:townname, :state_id)
     end
-
-    def require_admin
-	    if !current_user.admin?
-		    flash[:danger] = "Only admin users can perform that action"
-	      redirect_to town_path(@town)
-		  end
-	  end
 end

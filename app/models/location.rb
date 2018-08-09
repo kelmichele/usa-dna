@@ -1,4 +1,7 @@
 class Location < ApplicationRecord
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   validates :street, presence: true
   validates :zip, presence: true
   belongs_to :town
