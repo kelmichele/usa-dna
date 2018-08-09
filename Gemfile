@@ -5,6 +5,7 @@ ruby '2.4.0'
 
 gem 'rails', '~> 5.2.1'
 
+gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
@@ -13,7 +14,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'jquery-rails'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'stripe', '~> 3.8'
@@ -24,7 +24,7 @@ gem 'roo', '~> 2.7', '>= 2.7.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'uikit-rails'
 # gem 'devise'
-
+gem "aws-sdk-s3", require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

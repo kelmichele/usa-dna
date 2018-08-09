@@ -24,14 +24,6 @@
 
 	<div class="newlist">
 		<h2>Choose a state from the list below to find a location near you.</h2>
-		<% for state in @states %>
-		 	<%= link_to state_path(state) do %>
-				<p><%= state.name %></p>
-		 	<% end %>
-	  <% end %>
-
-
-
 		<!-- <div class="states-dd">
 			<div class="dropdown">
 			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,10 +37,15 @@
 							<%= state.name %>
 					 	<% end %>
 				  <% end %>
-
 			  </div>
 			</div>
 		</div> -->
+
+		<% for state in @states %>
+		 	<%= link_to state_path(state) do %>
+				<p class="col-md-2"><%= state.name %></p>
+		 	<% end %>
+	  <% end %>
 	</div>
 
 
