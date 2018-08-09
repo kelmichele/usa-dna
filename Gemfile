@@ -3,36 +3,28 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
+
 gem 'bootstrap-sass'
-
-# Use CoffeeScript for .coffee assets and views
+gem 'pg', '>= 0.18', '< 2.0'
+gem 'puma', '~> 3.11'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'jquery-rails'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'stripe', '~> 3.8'
+gem 'will_paginate', '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'rack-rewrite', '~> 1.5', '>= 1.5.1'
+gem 'roo', '~> 2.7', '>= 2.7.1'
+gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+# gem 'uikit-rails'
+# gem 'devise'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -61,3 +53,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+
+gem 'geocoder'
+# gem 'searchkick'
+# gem 'redis', '~>4.0'
