@@ -1,0 +1,35 @@
+<% @page_title = @state.name.capitalize %>
+
+<div class="all-towns">
+
+	<div class="full top">
+		<div class="inner">
+			<div class="one">
+			  <h1>Get DNA Tested Today in <span><%= @state.name %></span></h1>
+				<p>Get DNA Tested Today offers DNA &amp; Paternity testing options that are non-invasive, affordable, and 99.99% accurate. Your privacy is our guarantee.</p>
+				<!--  render 'shared/add_btns'   -->
+			</div>
+
+			<div class="two">
+				<p>Follow the link below to learn more about each of our DNA/Paternity testing options, and schedule your testing appointment online. </p>
+				<div class="clearfix"></div>
+				<div class="test-row"><%= link_to "Learn More", testing_path, class: 'tests' %></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="full pop">
+		<div class="one">
+		  <h1>Get DNA Tested Today in <span><%= @state.name %></span></h1>
+			<p>Get DNA Tested Today offers DNA &amp; Paternity testing options that are non-invasive, affordable, and 99.99% accurate. Your privacy is our guarantee.</p>
+				<!--  render 'shared/add_btns'   -->
+		</div>
+
+		<div class="location-map">
+
+  			<div class="map-hlf">
+					<%= render 'shared/map' %>
+	  		</div>
+		</div>
+	</div>
+</div>
