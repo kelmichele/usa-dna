@@ -9,4 +9,9 @@ Rails.application.routes.draw do
 	get 'testing', to: 'static_pages#testing'
 
 	resources :states
+	resources :towns do
+		collection do
+			post :import
+		end
+	end
 end
