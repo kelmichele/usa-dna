@@ -22,7 +22,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'rack-rewrite', '~> 1.5', '>= 1.5.1'
 gem 'roo', '~> 2.7', '>= 2.7.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
-# gem 'uikit-rails'
+gem 'uikit-rails'
 # gem 'devise'
 
 

@@ -6,6 +6,10 @@
 @import "mixins";
 @import "variables";
 
+@import "uikit";
+@import "uikit-variables";
+@import "uikit-components";
+
 
 .uk-accordion-title {margin-bottom:0;}
 .uk-accordion>:nth-child(n+2) {margin-top: 0;}
