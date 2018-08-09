@@ -13,6 +13,29 @@
 				<%= render 'shared/map' %>
 			</div>
 
+  		<div class="town-hlf">
+
+				<div class="loclist">
+					<% if @town_locations.count != 0 %>
+						<table class="locations">
+							<% @town_locations.each do |location| %>
+								<div class="townlisting-bx">
+									<h4>
+										<%= location.street.titleize %><br>
+										<% if location.street2 %><%= location.street2.titleize %><br><% end %>
+										<%= location.town.townname %>, <%= location.state.abv %> <%= location.zip %>
+										<br>
+										<a href="tel:18667504773" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 750-4773</a>
+									</h4>
+								</div>
+				  		<% end %>
+						</table>
+						<% else %>
+						<p>Locations are still being added. Please check back shortly!</p>
+					<% end %>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>

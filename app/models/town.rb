@@ -6,6 +6,7 @@ class Town < ApplicationRecord
 	belongs_to :state
 	validates :state_id, presence: true
   validates :slug, presence: true
+  has_many :locations
 
   default_scope -> { order(townname: :asc)}
   # default_scope -> { order(state_id: :asc)}
