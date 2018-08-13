@@ -43,7 +43,7 @@
 
 		<% for state in @states %>
 		 	<%= link_to state_path(state) do %>
-				<p class="col-md-2"><%= state.name %></p>
+				<p class="col-md-2"><%= state.name %> (<%= state.towns.count %>)</p>
 		 	<% end %>
 	  <% end %>
 	</div>
