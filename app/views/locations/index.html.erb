@@ -52,7 +52,7 @@
 						<h4>
 							<!-- <%= simple_format(location.full_address)%>-->
 							<%= location.street.titleize %><br>
-							<% if location.addr2 %><%= location.addr2.titleize %><br><% end %>
+							<% if location.street2 %><%= location.street2.titleize %><br><% end %>
 							<%= location.town.townname %>, <%= location.state.abv %> <%= location.zip %>
 						</h4>
 
