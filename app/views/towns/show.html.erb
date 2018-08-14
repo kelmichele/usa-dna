@@ -26,6 +26,7 @@
 										<%= location.town.townname %>, <%= location.state.abv %> <%= location.zip %>
 										<br>
 										<a href="tel:18667504773" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 750-4773</a>
+										<br><small>ID: <%= location.id %> &nbsp; | &nbsp; <%= link_to("Edit Location", edit_location_path(location)) %></small>
 									</h4>
 								</div>
 				  		<% end %>
