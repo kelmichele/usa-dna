@@ -1,26 +1,5 @@
 <% @page_title = "Our Locations" %>
 
-<!-- <div class="full">
-	<div class="wrap location-map">
-		<%= tag.h1 @page_title %>
-		<hr class="title-line">
-		<div class="clearfix"></div>
-		<%= render 'shared/dna-text' %>
-		<br><hr><br>
-
-		<%= tag.div class: 'col-md-5' do %>
-			<%= render 'shared/search_btn' %>
-		<% end %>
-
-		<%= tag.div class: 'col-md-5 col-md-offset-1' do %>
-			<%= render 'shared/add_btns' %>
-		<% end %>
-
-		<div class="clearfix"></div>
-		<br><hr><br>
-	</div>
-</div> -->
-
 <div class="full pop">
 	<div class="one">
 		<h1>Location Search Results</h1>
@@ -54,10 +33,11 @@
 							<%= location.street.titleize %><br>
 							<% if location.street2 %><%= location.street2.titleize %><br><% end %>
 							<%= location.town.townname %>, <%= location.state.abv %> <%= location.zip %>
+							<br>
+							<a href="tel:18667504773" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 750-4773</a>
 						</h4>
 
-							<% if location.longitude == nil %>**<small>Coordinates Missing**</small><% end %>
-							<div class="actions"><small><%= link_to("Edit Location (#{location.id})", edit_location_path(location)) %></small></div>
+							<!-- <div class="actions"><small><%= link_to("Edit Location (#{location.id})", edit_location_path(location)) %></small></div> -->
 
 					</div>
 				<% end %>
