@@ -5,7 +5,7 @@
 	<div class="full pop">
 		<div class="one">
 	  	<h1>USA DNA Testing in <span><%= @town.townname %>, <%= @state.abv %></span></h1>
-			<p>USA DNA Testing offers DNA &amp; Paternity testing options that are non-invasive, affordable, and 99.99% accurate. Your privacy is our guarantee.</p>
+		  <%= render 'shared/dna-text' %>
 		</div>
 
 		<div class="location-map">
@@ -40,7 +40,7 @@
 				  		<% end %>
 						</table>
 						<% else %>
-						<p>Locations are still being added. Please check back shortly!</p>
+						<p>Locations are added regularly. Please check back soon! <b><%= link_to "Click here", new_charge_path %></b> to order an At Home DNA Test Kit!</p>
 					<% end %>
 				</div>
 			</div>

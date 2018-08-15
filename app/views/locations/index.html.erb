@@ -3,9 +3,7 @@
 <div class="full pop">
 	<div class="one">
 		<h1>Location Search Results</h1>
-		<p>USA DNA Testing offers DNA &amp; Paternity testing options that are non-invasive, affordable, and 99.99% accurate. Your privacy is our guarantee.<br>
-		For more information, call us toll free at: <%= phone %>.
-			Click Here to schedule your testing appointment today!</p>
+	  <%= render 'shared/dna-text' %>
 	</div>
 
 
@@ -36,9 +34,7 @@
 							<br>
 							<a href="tel:18667504773" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 750-4773</a>
 						</h4>
-
-							<!-- <div class="actions"><small><%= link_to("Edit Location (#{location.id})", edit_location_path(location)) %></small></div> -->
-
+						<!-- <div class="actions"><small><%= link_to("Edit Location (#{location.id})", edit_location_path(location)) %></small></div> -->
 					</div>
 				<% end %>
 				</table>

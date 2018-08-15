@@ -1,7 +1,5 @@
 class LocationsController < ApplicationController
 	before_action :set_location, only: [:edit, :show, :update, :destroy]
-  # before_action :authenticate_user!, except: [:index, :show]
-  # before_action :require_admin, except: [:index, :show]
 
 	def index
 		@locations = if params[:l]
@@ -72,13 +70,6 @@ class LocationsController < ApplicationController
 		def set_location
 			@location = Location.find(params[:id])
 		end
-
-		def require_admin
-	    if !current_user.admin?
-		    flash[:danger] = "Only admin users can perform that action"
-		    redirect_to states_path
-		  end
-	  end
 
 		def location_params
       params.require(:location).permit(:street, :street2, :town_id, :zip, :latitude, :longitude )
