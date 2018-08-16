@@ -1,0 +1,294 @@
+<% @page_title = "Home" %>
+<% @page_description = "New Description" %>
+<!-- https://stock.adobe.com/search?serie_id=102483434&load_type=see_more&prev_url=detail -->
+<!-- https://stock.adobe.com/search?serie_id=170572779&load_type=see_more&prev_url=detail -->
+
+<div class="hero-home">
+	<div class="wrap">
+		<h1>USA DNA Testing</h1>
+		<h2>Easy as swab, 2, 3...</h2>
+		<h3>Call Us Today: <br>
+			<a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a></h3>
+	</div>
+</div>
+
+<div class="dna">
+	<div class="inner">
+		<div class="right">
+			<h3>USA DNA Testing provides fast, accurate, &amp; reliable DNA/Paternity Testing.<br> <b>Over 2,445 accredited locations nationwide!</b></h3>
+			<%= link_to "Find One Near You", states_path, class: 'link-a' %>
+		</div>
+	</div>
+</div>
+
+<div class="legal-lt">
+	<div class="inner">
+		<div class="left">
+			<h2><span>Legal &amp; Non-Legal</span><br> DNA &amp; Paternity Testing Options</h2>
+			<p>All samples are taken by gently rubbing a soft swab on the inside of the cheek, so testing is painless and non-invasive.</p>
+			<%= link_to "Testing Options", options_path, class: 'link-a' %>
+		</div>
+
+		<div class="right">
+			<%= image_tag('crazy-chromes.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive') %>
+		</div>
+	</div>
+</div>
+
+<div class="call-block">
+	<div class="inner">
+		<h3>Please call us, toll-free, if you have any questions, <br class="uno">or would like to schedule a DNA/Paternity Test:<br>
+		<a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a>
+	</h3>
+	</div>
+</div>
+
+<div class="homekit">
+	<div class="inner">
+		<div class="left">
+			<%= image_tag('test-kit-slide.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive') %>
+		</div>
+
+		<div class="right">
+			<h2>Home Testing Kit</h2>
+			<p>Our Home Testing Kit allows you to perform paternity testing in the comfort and privacy of your home, with 99.9% accuracy. One low price includes everything you need: testing kit, shipping, and results.</p>
+			<%= link_to "More Details", new_charge_path, class: 'link-a' %>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+.home .pg-body{
+	.breadcrumb {display: none;}
+	.hero-home { text-align:center;
+		@include sec-default(); background-color: white; padding-top: 45px; height:700px;
+		// background-color: lighten($blue, 30%); @include sec-bgimage('baby-crown.png'); background-size: 30%; background-position: left center;
+		@include sec-bgimage('hero-baby2.jpg');
+		// @include sec-bgimage('hero.jpg');
+
+		h1,h2,h3{font-weight: bold; text-shadow:0px 1px 1px rgba(black, .65); margin-bottom: 0; font-family: $open;}
+		h1 {margin: 0px;
+			text-transform: uppercase; color: $blue; font-size: 45px;}
+		h2 {font-size: 35px; }
+		h3 {font-size: 25px; }
+
+		// position: relative; z-index: 0;
+		// &::before {@include before(); height: 15%; top:85%;
+		// 	background: -webkit-linear-gradient(270deg, rgba(white, 0) 10%, rgba(white, .7) 55%, white 85%);
+		// 	background: linear-gradient(180deg, rgba(white, 0) 10%, rgba(white, .7) 55%, white 85%);
+		// }
+
+		.wrap-new{width: 45%; float: right;
+			.h1-img {width: 55%; @include center-block();}
+			h2,h3,a {color:white;}
+			h2 {margin-bottom: 20px;}
+		}
+	}
+
+	.dna {@include sec-default(); background-color: white;
+		h3{font-size: 21px; line-height: 1.5em;}
+		h2 { color: darken($blue, 10%); font-family: $source; font-weight: 600; font-size:30px; line-height: 1em;}
+		p{margin-bottom: 0;}
+		hr.hlf {margin-bottom: 30px;}
+		.link-a{@include purple-btn(50%); padding:10px 25px;
+			background: -webkit-linear-gradient(-102deg, darken($blue, 15%) 19%, lighten($sea, 8%) 81%);
+			background: linear-gradient(12deg, darken($blue, 15%) 19%, lighten($sea, 8%) 81%);
+		}
+
+		.left {@include sec-grid(left, 45%); display: none;}
+		.right {@include sec-grid(right, 35%); margin-right:14%; text-align: center; padding: 140px 0;}
+
+		@include sec-bgimage('us-map.png'); background-size: 48%; background-position: left center;
+	}
+
+	.legal-lt {@include sec-default(); background-color: $f9; padding:60px 0 80px;
+		.left {@include sec-grid(left, 40%); margin-left: 8%; margin-top: 35px;}
+		.right {@include sec-grid(left, 47%); margin-left: 5%;}
+
+		.abs {position: absolute; width:35%; margin-top:-3.5%; right:0;}
+
+		p {font-size: 18px; margin-bottom:20px;}
+		h2 { line-height: 1.5em;
+			span{font-size:28px;font-weight: bold; letter-spacing: 1px;}
+		}
+		.link-a{@include purple-btn(35%);float: left; margin-left: 5%;}
+	}
+
+	.call-block{
+		@include sec-default(); text-align: center;padding:$sec-pad;
+		background: -webkit-linear-gradient(-300deg, darken($blue, 15%), $blue);
+		background: linear-gradient(-300deg, darken($blue, 15%), $blue);
+		h3{color: white; font-weight: bold; letter-spacing: 1px; font-size: 21px;}
+
+		.img-icon {width:120px; @include center-block();}
+
+		padding-bottom: 90px;
+		#number_link{color: white;}
+	}
+
+	.homekit { @include sec-default(); padding-bottom: 35px; background-color: white;
+		border-bottom: 15px solid $f6;
+		// padding:60px 0;
+		.left {@include sec-grid(left, 30%); margin-left: 10%; margin-top: -10%;}
+		.right {@include sec-grid(none, 40%); margin-left: 10%; margin-top: 3.5%; }
+		.link-a{@include purple-btn(40%); float:left;
+			background: -webkit-linear-gradient(-102deg, darken($blue, 15%) 19%, lighten($blue, 8%) 81%);
+			background: linear-gradient(12deg, darken($blue, 15%) 19%, lighten($blue, 8%) 81%);
+		}
+		h2{font-size:27px; font-weight: bold;}
+		p{font-size: 18px; }
+	}
+
+	.us { @include sec-default(); padding: $sec-pad; background-color: $f2;
+		// @include sec-bgimage('preview11.png'); background-size: 35%; background-position: left center;
+		.one, .two, .three {@include sec-grid(left, 30%); margin-left: 1%;}
+	}
+
+
+	@include bp(tb) {
+		.hero-home {height: 550px;}
+
+		.dna{background-size: 40%;
+			.right {@include sec-grid(right, 50%); margin-right:10%; padding: 70px 0;}
+			h3 {font-size: 18px}
+		}
+
+		.legal-lt {padding:45px 0 60px;
+			.left {@include sec-grid(left, 45%); margin-left: 0; margin-top: 15px;}
+			.right {margin-left: 0; float: right;}
+			.link-a {width: 50%; font-size: 16px;}
+			h2{font-size: 19px;
+				span {font-size: 21px;}
+			}
+			p{font-size: 16px;}
+		}
+
+		.call-block{padding:30px 0 35px;
+			h3 {font-size: 19px;}
+		}
+
+		.homekit {padding-bottom: 0px;
+			.left {width: 30%; margin-top: -6%; margin-left:0;}
+			.right {margin-left: 5%; width: 60%;}
+			h2 {margin-bottom: 0px;}
+			p {font-size: 16px; margin-top: 6px;}
+		}
+	}
+
+	@include bp(tn) {
+		.hero-home {height: 350px; background-position: left center; padding-top: 30px;
+			.wrap{width: 70%; float: right;}
+			h1 {font-size: 32px; line-height: 1em;}
+			h2 {font-size: 30px; line-height: 1em;}
+			h3 {font-size: 21px;}
+		}
+
+		.dna{background-size: 40%;
+			.right {@include sec-grid(right, 55%); margin-right:5%; padding: 50px 0 65px;}
+			h3 {font-size: 16px}
+			.link-a {font-size: 15px; padding:10px 15px;}
+		}
+
+		.legal-lt {padding:20px 0 15px;
+			.left {width: 75%; @include center-block(); text-align: center;}
+			.right {@include center-block();}
+			.link-a {width: 40%;@include center-block(); font-size: 15px; padding:6px 10px;}
+			h2{font-size: 17px; margin-bottom: 0;
+				span {font-size: 19px;}
+			}
+			p{font-size: 15px; margin: 5px 0 10px;}
+		}
+
+		.call-block{padding:25px 0 20px;
+			h3 {font-size: 17px;}
+		}
+
+		.homekit {padding-bottom: 0px;
+			.left {width: 30%; margin-top: -6%; margin-left:0;}
+			.right {margin-left: 3%; width: 65%;}
+			h2 {font-size: 21px}
+			p {font-size: 15px; margin-top: 3px;}
+			.link-a {font-size: 15px; padding:7px 10px;}
+		}
+	}
+
+	@include bp(md) {
+		.hero-home {height: 300px; }
+
+		.dna{background-size: 30%; background-position: left top;
+			.right {@include sec-grid(right, 60%); padding: 30px 0 40px; text-align: left;}
+			h3 {font-size: 16px}
+			.link-a {font-size: 15px; padding:10px 15px;}
+		}
+
+		.legal-lt {padding:10px 0 25px;
+			.left {width: 75%; @include center-block(); text-align: center;}
+			.right {display: none;}
+		}
+
+		.homekit {padding-bottom: 0px;
+			.left {width: 30%; margin-top: -6%; margin-left:0;}
+			.right {margin-left: 3%; width: 65%;}
+			h2 {font-size: 21px}
+			p {font-size: 15px; margin-top: 3px;}
+			.link-a {font-size: 15px; padding:7px 10px;}
+		}
+	}
+
+	@include bp(mb) {
+		.hero-home {
+			&::after{@include before(); background-color: rgba($dark, .3); z-index: -2}
+		}
+
+		.dna{background-size: 25%; background-position: bottom right;
+			.right {@include sec-grid(left, 75%); }
+			h3 {font-size: 15px}
+			.link-a {font-size: 14px; padding:6px 15px;}
+		}
+
+		.call-block {padding:15px 0 6px;
+			.inner{width: 90%;}
+			h3 {font-size: 16px;}
+		}
+
+		.legal-lt .left {width: 98%;}
+
+		.homekit {padding: 10px 0;
+			.inner {width: 90%;}
+			.left {width: 25%; margin-top: 15px;}
+			.right {margin-left: 0; float: right; width: 70%;}
+			h2 {font-size: 19px}
+			.link-a {font-size: 14px; padding:5px 10px;}
+		}
+	}
+
+	@include bp(ph) {
+		.hero-home {height:200px;
+			// background-position: top left;
+			&::after{background-color: rgba($dark, .45);}
+			.wrap{@include sec-default(); }
+			h1,h2,h3{text-shadow:0px 0px 1px rgba(black, .9);}
+			h1{font-size: 28px; color: lighten($blue, 10%)}
+			h2 {font-size: 22px;}
+			h3{font-size: 19px; margin-top: 10px; color: white;}
+		}
+
+		.dna{background-size: 20%;
+			.inner {width: 90%;}
+			.right {@include sec-grid(left, 95%); padding: 20px 0;}
+		}
+		.call-block br.uno{display: none;}
+		.legal-lt .inner{width: 90%;}
+
+		.homekit {padding: 10px 0;
+			@include sec-bgimage('test-kit-mob.png'); background-size: 33%; background-position: bottom right; padding-bottom:80px;
+			.left {display: none;}
+			.right {float: left; width: 95%;}
+			h2 {font-size: 17px}
+		}
+	}
+}

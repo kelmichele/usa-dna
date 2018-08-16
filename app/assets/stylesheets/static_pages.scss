@@ -11,54 +11,86 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 	.breadcrumb {display: none;}
 	.hero-home { text-align:center;
 		@include sec-default(); background-color: white; padding-top: 45px; height:700px;
-		@include sec-bgimage('hero.jpg');
+		@include sec-bgimage('hero.jpg');height:600px; background-position: left center;
 
-		h1,h2,h3{font-weight: bold; text-shadow:0px 1px 1px rgba(black, .65); margin-bottom: 0}
-		h1 {margin: 0px; font-family: $quick;
+		h1,h2,h3{font-weight: bold; text-shadow:0px 1px 1px rgba(black, .65); margin-bottom: 0; font-family: $open;}
+		h1 {margin: 0px;
 			text-transform: uppercase; color: $blue; font-size: 45px;}
-		h2 {font-size: 35px; color:$sea;}
-		h3 {font-size: 25px; color:$dark; }
+		h2 {font-size: 35px; }
+		h3 {font-size: 25px; }
 
 		position: relative; z-index: 0;
 		&::before {@include before(); height: 15%; top:85%;
 			background: -webkit-linear-gradient(270deg, rgba(white, 0) 10%, rgba(white, .7) 55%, white 85%);
 			background: linear-gradient(180deg, rgba(white, 0) 10%, rgba(white, .7) 55%, white 85%);
 		}
+
+		.wrap-new{width: 45%; float: right;
+			.h1-img {width: 55%; @include center-block();}
+			h2,h3,a {color:white;}
+			h2 {margin-bottom: 20px;}
+		}
 	}
 
-	.dna {@include sec-default(); background-color: white;
-		h3{font-size: 21px; line-height: 1.5em;}
-		h2 { color: darken($blue, 10%); font-family: $source; font-weight: 600; font-size:30px; line-height: 1em;}
-		p{margin-bottom: 0;}
-		hr.hlf {margin-bottom: 30px;}
-		.link-a{@include purple-btn(50%); padding:10px 25px;
-			background: -webkit-linear-gradient(-102deg, darken($blue, 15%) 19%, lighten($sea, 8%) 81%);
-			background: linear-gradient(12deg, darken($blue, 15%) 19%, lighten($sea, 8%) 81%);
+	// .dna {@include sec-default(); background-color: white;
+	// 	h3{font-size: 21px; line-height: 1.5em;}
+	// 	h2 { color: darken($blue, 10%); font-family: $source; font-weight: 600; font-size:30px; line-height: 1em;}
+	// 	p{margin-bottom: 0;}
+	// 	hr.hlf {margin-bottom: 30px;}
+	// 	.link-a{@include purple-btn(50%); padding:10px 25px;
+	// 		background: -webkit-linear-gradient(-102deg, darken($blue, 15%) 19%, lighten($sea, 8%) 81%);
+	// 		background: linear-gradient(12deg, darken($blue, 15%) 19%, lighten($sea, 8%) 81%);
+	// 	}
+
+	// 	.left {@include sec-grid(left, 45%); display: none;}
+	// 	.right {@include sec-grid(right, 35%); margin-right:14%; text-align: center; padding: 140px 0;}
+
+	// 	@include sec-bgimage('us-map.png'); background-size: 48%; background-position: left center;
+	// }
+
+	.dna-dos {@include sec-default(); background-color: white;
+		padding:100px 0; text-align: center;
+		h3{font-size: 28px; line-height: 1.5em; font-weight: bold;}
+		p{font-size: 24px; margin-bottom: 30px;}
+
+		.link-a{@include purple-btn(60%); padding:10px 25px;
+			background: -webkit-linear-gradient(-102deg, darken($red, 15%) 19%, lighten($red, 8%) 81%);
+			background: linear-gradient(12deg, darken($red, 15%) 19%, lighten($red, 8%) 81%);
 		}
-
-		.left {@include sec-grid(left, 45%); display: none;}
-		.right {@include sec-grid(right, 35%); margin-right:14%; text-align: center; padding: 140px 0;}
-
-		@include sec-bgimage('us-map.png'); background-size: 48%; background-position: left center;
+		.img-layer{position: absolute; z-index: 2; width: 110px;@include rotate(-20deg); margin-left:22.5%; margin-top: -2.7%; opacity: .4;}
+		.tb {width:55%; @include center-block(); position: relative; z-index: 5;}
 	}
 
 	.legal-lt {@include sec-default(); background-color: $f9; padding:60px 0 80px;
-		.left {@include sec-grid(left, 40%); margin-left: 8%; margin-top: 35px;}
-		.right {@include sec-grid(left, 47%); margin-left: 5%;}
+		.left {@include sec-grid(left, 50%); margin-left: 8%; margin-top: 8%; }
+		.right {@include sec-grid(left, 30%); margin-left: 5%;}
+		padding:20px 0 0;
+		// .left {@include sec-grid(left, 40%); margin-left: 8%; margin-top: 35px;}
+		// .right {@include sec-grid(left, 47%); margin-left: 5%;}
 
 		.abs {position: absolute; width:35%; margin-top:-3.5%; right:0;}
 
-		p {font-size: 18px; margin-bottom:20px;}
+		p {font-size: 17px; margin-bottom:20px;
+			span {font-weight: 500;}
+		}
 		h2 { line-height: 1.5em;
 			span{font-size:28px;font-weight: bold; letter-spacing: 1px;}
 		}
-		.link-a{@include purple-btn(35%);float: left; margin-left: 5%;}
+		.link-a{@include purple-btn(35%);float: left; margin-left: 5%;
+			background: -webkit-linear-gradient(-102deg, darken($blue, 15%) 19%, lighten($blue, 8%) 81%);
+			background: linear-gradient(12deg, darken($blue, 15%) 19%, lighten($blue, 8%) 81%);
+		}
+
+		// @include sec-bgimage('m39.png'); background-size: 45%;
+		// .left{float: right; margin-left: 0; width: 42%;}
+		// .right {float: none; margin-left:23%; width: 35%; margin-top: -13%;}
 	}
 
 	.call-block{
 		@include sec-default(); text-align: center;padding:$sec-pad;
-		background: -webkit-linear-gradient(-300deg, darken($blue, 15%), $blue);
-		background: linear-gradient(-300deg, darken($blue, 15%), $blue);
+		// background: -webkit-linear-gradient(-300deg, darken($blue, 15%), $blue);
+		// background: linear-gradient(-300deg, darken($blue, 15%), $blue);
+		background-color: $teal;
 		h3{color: white; font-weight: bold; letter-spacing: 1px; font-size: 21px;}
 
 		.img-icon {width:120px; @include center-block();}

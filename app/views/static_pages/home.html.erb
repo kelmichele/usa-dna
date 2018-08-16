@@ -1,20 +1,24 @@
 <% @page_title = "Home" %>
 <% @page_description = "New Description" %>
-<!-- https://stock.adobe.com/search?serie_id=102483434&load_type=see_more&prev_url=detail -->
 <!-- https://stock.adobe.com/search?serie_id=170572779&load_type=see_more&prev_url=detail -->
 
 <div class="hero-home">
-	<div class="wrap">
-		<h1>USA DNA Testing</h1>
+	<div class="wrap-new">
+			<%= image_tag('logo-text.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive h1-img') %>
+		<!-- <h1>USA DNA Testing</h1> -->
 		<h2>Easy as swab, 2, 3...</h2>
-		<h3>Call Us Today: <br><a href="tel:18667504773" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');"> 1(866) 750-4773</a></h3>
+		<h3>Call Us Today: <br>
+			<a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a>
+		</h3>
 	</div>
 </div>
 
-<div class="dna">
+<div class="dna-dos">
 	<div class="inner">
-		<div class="right">
-			<h3>USA DNA Testing provides fast, accurate, &amp; reliable DNA/Paternity Testing.<br> <b>Over 2,445 accredited locations nationwide!</b></h3>
+		<%= image_tag('star.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive img-layer') %>
+		<div class="tb">
+			<h3>Painless Testing, Reliable Results</h3>
+			<p>USA DNA Testing offers fast, accurate, affordable DNA/Paternity Testing in over 2,445 accredited locations across the nation!</p>
 			<%= link_to "Find One Near You", states_path, class: 'link-a' %>
 		</div>
 	</div>
@@ -24,12 +28,16 @@
 	<div class="inner">
 		<div class="left">
 			<h2><span>Legal &amp; Non-Legal</span><br> DNA &amp; Paternity Testing Options</h2>
-			<p>All samples are taken by gently rubbing a soft swab on the inside of the cheek, so testing is painless and non-invasive.</p>
+			<p>We offer a variety of testing options to suit different needs.
+			Whether you require legal testing, which must maintain a strict chain of custody, or a non-legal option, to be done in the comfort of your own home,
+			you can trust the professional staff of USA DNA Testing to uphold the highest quality standards.</p>
+			<p><span>All samples are taken by gently rubbing a soft swab on the inside of the cheek, so testing is painless and non-invasive.</span></p>
 			<%= link_to "Testing Options", options_path, class: 'link-a' %>
 		</div>
 
 		<div class="right">
-			<%= image_tag('crazy-chromes.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive') %>
+			<%= image_tag('baby-crown.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive') %>
+			<!-- <%= image_tag('crazy-chromes.png', alt: 'USA DNA Testing: genetic markers image', class: 'img-responsive') %> -->
 		</div>
 	</div>
 </div>
@@ -37,7 +45,7 @@
 <div class="call-block">
 	<div class="inner">
 		<h3>Please call us, toll-free, if you have any questions, <br class="uno">or would like to schedule a DNA/Paternity Test:<br>
-	  <a href="tel:18667504773" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 750-4773</a>
+		<a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a>
 	</h3>
 	</div>
 </div>

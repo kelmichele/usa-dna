@@ -71,12 +71,20 @@
   z-index: -1;
 }
 
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
 @mixin purple-btn($size) {
   width: $size; padding: 10px 15px 12px; text-align: center;
   background: -webkit-linear-gradient(-102deg, darken($purple, 15%) 19%, lighten($plum, 8%) 81%);
   background: linear-gradient(12deg, darken($purple, 15%) 19%, lighten($plum, 8%) 81%);
-  color: white; font-weight: bold; font-size: 17px; text-shadow: 0px 1px 1px rgba(black, .3);
-  border-radius: 20px; border-width:0px;
+  color: white; font-weight: 500; font-size: 17px; text-shadow: 0px 1px 1px rgba(black, .3);
+  // border-radius: 20px; border-width:0px;
 }
 
 @mixin gradient($color1, $color2) {
