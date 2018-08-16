@@ -85,7 +85,7 @@ a:hover {text-decoration: none; opacity: .7;}
     li.ft-only.mfl {display: block; }
   }
 
-  .copy {@include sec-default(); text-align: center; padding: 5px 0; background-color: $dk-blue; margin-bottom: 0; color: white;}
+  .copy {@include sec-default(); text-align: center; padding: 5px 0; background-color: $blue; margin-bottom: 0; color: white;}
 
   @include bp(tb) {
     text-align: center;
@@ -145,7 +145,6 @@ a:hover {text-decoration: none; opacity: .7;}
   }
 
   .shared-text {
-    // width: 60%; font-size: 15px; font-weight: bold;
     a, span {color: $blue;}
   }
   .add-btns-blk {width:75%; @include center-block();}
