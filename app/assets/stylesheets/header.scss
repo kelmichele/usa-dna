@@ -1,80 +1,6 @@
 @import "mixins";
 @import "variables";
 
-.admin-bar {
-	@include sec-default(); background-color: black;
-	text-align: center;
-	p, h4{color: white; font-weight: bold; margin-bottom: 0;}
-	a {color: $blue;}
-
-	.avail, .admenu {display: inline-block; padding-top:8px;
-	 	// padding: 10px 20px;
-	}
-	.avail {width: 45%; float: left; margin-top: 7px; color:white;}
-
-	i {background-color: white; color: black; font-size: 20px;
-		width: 45px; height: 35px; padding-top: 7px;
-		@include center-block(); position: relative;
-	}
-
-
-	#chatrooms-menu {
-	  font-size: 20px;
-	  height: 50px;
-	  line-height: 50px;
-
-	  p {font-weight: normal; color: black; text-align: center; font-size: 15px;}
-
-	  ul {
-	    margin: 0;
-	    position: relative;
-	    top: 8px;
-	    right: 200px;
-	    border-radius: 0 0 5px 5px;
-	    height: 300px;
-	    overflow: scroll;
-	    overflow-x: hidden;
-	    padding-top: 15px;
-	    min-width: 200px;
-	    li { margin-bottom: 15px;
-	      a {
-	        width: 100%;
-	      	color: $blue !important;
-	      }
-	    }
-	  }
-	  // .unseen-conv {
-	  //   a {
-	  //     background: $f7;
-	  //     color: black !important;
-	  //   }
-	  // }
-	}
-
-	#unseen-chatrooms {
-	  visibility: hidden;
-	  padding: 1px;
-	  position: absolute;
-	  // font-size: 13px;
-	  // font-size: 1.3rem;
-	}
-
-	// #unseen-chatrooms {
-	//   right: 5px;
-	//   background: #E92F2F;
-	// }
-
-	// #chatrooms-list {
-	//   position: fixed;
-	//   bottom: 0;
-	//   right: 0;
-	//   padding: 0;
-	//   .col-sm-2 {
-	//     padding: 0;
-	//   }
-	// }
-}
-
 .site-header { @include sec-default();}
 .header-wrapper {@include sec-default();
 	.top, .full { @include sec-default();}
@@ -176,7 +102,9 @@ h3.module-title{color: white;}
 
 
 
-.header-style2 {@include sec-default();border-bottom: 1px solid rgba($blue, .2); text-align:center;
+.header-style2 {@include sec-default(); text-align:center;
+	// border-bottom: 1px solid rgba($blue, .2);
+	box-shadow: 1px 2px 1px rgba($blue, .2);
 	.inner {@include sec-default(); padding: 5px 30px 10px;}
 	.left, .nav-mid, .right-call-block { display:inline-block; width:20%;}
 	.left{ float:left;}

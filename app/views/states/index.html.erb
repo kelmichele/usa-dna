@@ -2,46 +2,36 @@
 <% @page_description = "New Description" %>
 
 <div class="all-states">
-	<div class="top">
-		<div class="text">
-			<h1><%= @page_title %></h1>
-			<p>USA DNA Testing offers affordable DNA/Paternity Testing in over 2,500 locations nationwide. </p>
-			<!-- <p>USA DNA Testing provides affordable DNA/Paternity Testing in over 2500 locations nationwide. Each of our locations are certified and accredited by the AABB and ISO 17025.</p> -->
-
-			<!-- <div class="two">
-				<%= image_tag('flat-map.png', alt: 'USA DNA Testing, locations by state, map photo') %>
-			</div> -->
-		</div>
-	</div>
-
-
-<!-- <div class="full"> -->
 	<div class="newlist">
-		<h2>Select a state to find a location near you.</h2>
-		<p class="text-center">Each location is certified and accredited by the AABB and ISO 17025.</p>
-		<div class="states-dd">
-			<div class="dropdown">
-			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Choose a State <i class="fa fa-angle-down"></i>
-			  </button>
+		<div class="cont">
+			<h1><%= @page_title %></h1>
+			<hr class="hlf">
+			<p>USA DNA Testing offers affordable DNA/Paternity Testing in over 2,500 locations nationwide. Each location is certified and accredited by the AABB and ISO 17025</p>
+			<hr class="hlf">
+			<h2>Select a state to find a location near you.</h2>
+			<br>
+			<div class="states-dd">
+				<div class="dropdown">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Choose a State <i class="fa fa-angle-down"></i>
+				  </button>
 
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<% for state in @states %>
-					 	<%= link_to state_path(state), class: 'dropdown-item' do %>
-					 		<%= image_tag("seals/#{state.name.upcase}.png", class: 'state-icons', alt: 'USA DNA Testing - state icons') %>
-							<%= state.name %>
-					 	<% end %>
-				  <% end %>
-			  </div>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<% for state in @states %>
+						 	<%= link_to state_path(state), class: 'dropdown-item' do %>
+						 		<%= image_tag("seals/#{state.name.upcase}.png", class: 'state-icons', alt: 'USA DNA Testing - state icons') %>
+								<%= state.name %>
+						 	<% end %>
+					  <% end %>
+				  </div>
+				</div>
 			</div>
 		</div>
 	</div>
-		<!--<p class="col-md-2"><%= state.name %> (<%= state.towns.count %>)</p> -->
-	<!-- </div> -->
 
 	<div class="opt-block">
 		<div class="inner">
-			<div class="two"><%= image_tag('test-icon.png', alt: 'USA DNA Testing, painless swab DNA testing') %></div>
+			<div class="two"><%= image_tag('test-icon2a.png', alt: 'USA DNA Testing, painless swab DNA testing') %></div>
 			<div class="one">
 				<p>Follow the link below to learn more about each of our DNA/Paternity testing options, and schedule your testing appointment online. </p>
 				<div class="clearfix"></div>
@@ -49,16 +39,30 @@
 			</div>
 		</div>
 	</div>
+	<div class="full-img"></div>
 
-	<div class="call-block">
+
+	<!-- <div class="call-block">
 		<div class="inner">
 			<h3>If you have any questions, or would like to speak to a certified collector, give us a call:<br> <span><a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 212-5426</a></span></h3>
 		</div>
-	</div>
+	</div> -->
+
+	<!-- <div class="call3">
+		<div class="blk one">
+			<p>Do you have questions about our DNA/Paternity Testing?</p>
+		</div>
+
+		<div class="blk two">
+			<p>Would you like to schedule a DNA/Paternity Test?</p>
+		</div>
+
+		<div class="blk three">
+			<p>Would you like to speak to a certified collector?</p>
+		</div>
+
+		<div class="blk four">
+			<h4>Call us today:<br> <a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1(866) 212-5426</a>
+		</div>
+	</div> -->
 </div>
-
-
-
-<!-- state26 = State.create(name: "Nebraska", abv: "NE") -->
-<!-- .each do |state|  -->
-<!-- for state in @cols_one  -->
