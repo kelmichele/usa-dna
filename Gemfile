@@ -16,7 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
-gem 'stripe', '~> 3.8'
+gem 'stripe'
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'rack-rewrite', '~> 1.5', '>= 1.5.1'

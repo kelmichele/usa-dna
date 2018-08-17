@@ -6,7 +6,7 @@
       <div class="left">
         <h1>Home DNA/Paternity Test</h1>
         <h3>99.9% Accuracy Guaranteed</h3>
-        <p class="lpad">The At-Home DNA Paternity Test Kit provides everything you need to test for paternity in the comfort and privacy of your home.</p>
+        <p class="lpad">Our At-Home DNA/Paternity Test Kit provides everything you need to test for paternity in the comfort and privacy of your own home.</p>
 
         <div class="pricing">
           <%= form_tag charges_path do %>
@@ -25,7 +25,7 @@
             </article>
 
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-key="<%= Rails.application.credentials.stripe[:publishable_key] %>"
             data-description="At Home DNA Test"
             data-amount="17900"
             data-zip-code="true"
@@ -35,14 +35,14 @@
           <% end %>
 
           <p class="call-add">Have Questions?<br>
-            Call us at <a href="tel:8662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a> for more information.</p>
+            Call us at <a href="tel:18662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a> for more information.</p>
         </div>
 
 
       </div>
 
       <div class="right">
-        <%= image_tag('test-kit-slide.jpg', class: 'img-responsive', alt: 'USA DNA Testing, home kit') %>
+        <%= image_tag('dna-box.png', class: 'img-responsive', alt: 'USA DNA Testing, home kit') %>
       </div>
     </div>
   </div>

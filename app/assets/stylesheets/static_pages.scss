@@ -272,7 +272,7 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			background: -webkit-linear-gradient(-102deg, darken($btn1, 25%) 19%, darken($btn1, 20%) 81%);
 			background: linear-gradient(12deg, darken($btn1, 25%) 19%, darken($btn1, 20%) 81%);
 
-			border-radius: 20px;
+			border-radius: 0px;
 			&:hover {opacity: .7;}
 
 			span {font-size: 18px; font-family: $quick; font-weight: bold; background:transparent;

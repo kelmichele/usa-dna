@@ -14,7 +14,7 @@ class ChargesController < ApplicationController
 	  charge = Stripe::Charge.create(
 	    :customer    => customer.id,
 	    :amount      => @amount,
-	    :description => 'At Home DNA Test',
+	    :description => 'At Home DNA/Paternity Test',
 	    :currency    => 'usd'
 	  )
 
