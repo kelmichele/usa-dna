@@ -248,27 +248,41 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 
 .home-test {
 	.top-sec {
-		@include sec-default(); padding:45px 0 30px; background-color: white;
-		// @include sec-bgimage('ribbon-bg.png'); background-size: 55%; background-position: top right;
-		.inner {width: 80%; float: left;}
+		@include sec-default(); padding:45px 0 60px; background-color: white;
+		position: relative; z-index: 0;
+		&::before {@include before(); height:55%; background-color: $blue2;}
+		.inner {width:65%}
 
-		h1 {font-size: 26px; font-weight: bold; letter-spacing: 1px; margin-bottom: 0;}
-		.left, .right {@include sec-grid(left, 45%);}
-		.right {width: 33%; margin-left: 3%; }
-		.left{padding:30px 0; float:none; margin-left: 5%; margin-top: 20px;}
+		.intro {width: 65%;
+			h1, h3, p {color: $f7;}
+			h1 {font-size: 26px; font-weight: bold; letter-spacing: .5px; margin-bottom: 0;}
+			h3 {font-weight: 500;letter-spacing: .5px; }
+			p{font-size: 18px; line-height: 1.5em;}
+		}
+		.left, .right {@include sec-grid(left, 50%);}
+		.right {width: 37%; float:right; }
+		.left{ margin-left: 5%; margin-top: 7%;}
 		p.call-add {font-weight: bold; padding-top:15px;
 			a {color: $blue;}
 		}
 
-		.pricing {padding-left:15px;
+		.price-box {
+			@include sec-default(); background-color: $f7;
+			padding: 30px; margin-top:35px; box-shadow: 0 0px 30px rgba(black, .2);
+		}
+
+		.pricing, .call {padding-left:15px;
 			h4 {font-weight: bold; margin-bottom: 5px; }
-			p{margin: 0 0 5px; font-size: 18px;
-				b{font-size: 21px;font-family: $source;}
+			h3 {font-size: 21px; font-family: $quick;margin-bottom: 0px;
+				span{font-family: $open; font-weight: bold; font-size: 23px; color: $blue2;}
+			}
+			p{margin: 0 0 5px; font-size: 18px; padding-left: 10px;
+				b{font-family: $open; color: $blue2}
 				span {font-style: italic; font-weight: normal; font-size: 16px;}
 			}
-			label {font-weight: normal;}
+			label {font-weight: normal; margin-bottom: 20px;}
 		}
-		.stripe-button-el { width: 35%;
+		.stripe-button-el { width: 55%;
 			background: -webkit-linear-gradient(-102deg, darken($btn1, 25%) 19%, darken($btn1, 20%) 81%);
 			background: linear-gradient(12deg, darken($btn1, 25%) 19%, darken($btn1, 20%) 81%);
 
@@ -281,11 +295,11 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 		}
 
 		@include bp(dt) {
-			background-size: 50%;
-			.inner{@include center-block();}
-			.left, .right {width: 45%;}
-			.right {width: 28%; margin-left: 10%; }
-			.left{margin-top:0; margin-left: 8%}
+			// background-size: 50%;
+			// .inner{@include center-block();}
+			// .left, .right {width: 45%;}
+			// .right {width: 28%; margin-left: 10%; }
+			// .left{margin-top:0; margin-left: 8%}
 		}
 
 		@include bp(tb) {
@@ -334,9 +348,8 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 		}
 	}
 
-	.banner{@include sec-default(); text-align: center; padding: 30px 20px; height:160px;
-		background: -webkit-linear-gradient(102deg, darken($blue, 15%) 19%, lighten($blue, 10%) 81%);
-		background: linear-gradient(-12deg, darken($blue, 15%) 19%, lighten($blue, 10%) 81%);
+	.banner{@include sec-default(); text-align: center; padding: 30px 20px;
+		background-color: $nteal; margin-top: 30px;
 
 		h3 {color: white; font-size: 22px; margin-bottom: 5px; font-weight: bold;}
 		p {color: white; font-size: 18px; margin-top: 0;}
@@ -357,41 +370,41 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 	}
 
 	.inst{@include sec-default();
-	 	padding:0 0 45px; background-color: $f7;
+	 	padding:40px 0; background-color: $f7;
 		// @include sec-bgimage('ribbon-bg-rev.png'); background-size: 60%; background-position:bottom left;
 
-	 	.inner {float: right; width: 65%;}
+	 	// .inner {float: right; width: 65%;}
 		.step{display: inline-block; float: left;
 		 	margin-bottom: 30px;
 		 	background-color: $f8;
 		 	padding: 10px 20px;
-		 	width: 45%; height:225px;
-		 	margin-left: 0;
+		 	width: 40%; height:225px;
+		 	margin-left: 5%;
 		 	border-radius: 2px;
 		 	box-shadow: 0px 1px 20px rgba(black, .1);
-			&.one, &.two {margin-top: -4%}
+			// &.one, &.two {margin-top: -4%}
 			&.four, &.two {margin-left: 7%}
 
 			p {margin-top: 20px; text-align: center;}
 		}
 		h4{font-weight: bold; font-family: $source; font-size: 25px;color: darken($blue, 15%); margin-top:5px; margin-bottom:0px;}
-		h4.lb{font-weight: bold; margin-top:6px; font-family:$quick;color: darken($btn2, 10%); font-size: 18px;
+		h4.lb{font-weight: bold; margin-top:6px; font-family:$quick;color: white; font-size: 18px;
 			position: relative;z-index: 0;
-			&::before {@include before(); background-color: $f2; border-radius: 4px;
-				background-color: lighten($btn1, 20%);
+			&::before {@include before(); background-color: $f2;
+				background-color: lighten($blue, 20%);
 			 	box-shadow: 0px 1px 10px rgba(black, .1);
 				height:130%; margin-top: -1%;
-				width:120%; left:-15%;
+				width:120%; left:-10%;
 			}
 		}
 
 		.icon-qt{height:215px; display: inline-block;float: left; margin-right: 5px;}
 
-		@include bp(dt) {
-		 	.inner { width: 60%;}
-			.step{ margin-left: 5%; width: 40%;}
-			h4.lb::before{width:125%; left:-20%;}
-		}
+		// @include bp(dt) {
+		//  	.inner { width: 60%;}
+		// 	.step{ margin-left: 5%; width: 40%;}
+		// 	h4.lb::before{width:125%; left:-20%;}
+		// }
 
 		@include bp(tb) {
 			background-size: 70%;
