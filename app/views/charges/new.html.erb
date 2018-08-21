@@ -12,8 +12,8 @@
       <div class="price-box">
         <div class="left">
           <div class="pricing">
-        <p class="lpad">Our At-Home DNA/Paternity Test Kit provides everything you need to test for paternity in the comfort and privacy of your own home.</p>
-        <hr>
+            <p class="lpad">Our At-Home DNA/Paternity Test Kit provides everything you need to test for paternity in the comfort and privacy of your own home.</p>
+            <hr>
             <%= form_tag charges_path do %>
               <article>
                 <% if flash[:error].present? %>
@@ -39,8 +39,9 @@
               data-locale="auto"></script>
             <% end %>
           </div>
-          <!-- <br><hr> -->
+
           <div class="call">
+          <div class="clearfix"></div><hr>
             <p class="call-add">
               <!-- Have Questions?<br> -->
               Give us a call for more information:<br>
@@ -65,31 +66,38 @@
   </div> -->
 
   <div class="inst">
-    <div class="inner">
-      <div class="step one">
-        <h4>Step 1.</h4>
-        <h4 class="lb">Label Swab Envelopes:</h4>
-        <p>The information must be filled out completely for test to be accurate.</p>
+    <div class="inside">
+      <div class="left">
+        <h3>When you receive your Home Test Kit, follow these simple steps. Once we receive and test the samples, we will contact you with the results.</h3>
+        <%= image_tag('screen.png', class: 'img-responsive', alt: 'USA DNA Testing, home kit') %>
       </div>
 
-      <div class="step two">
-        <h4>Step 2.</h4>
-        <h4 class="lb">Collect DNA Samples:</h4>
-        <p>Simply rub the Sterile Polyester Tipped Applicators for 30 seconds inside the cheeks of the individual being tested.</p>
-      </div>
+      <div class="right">
+        <div class="step one">
+          <h4>Step 1.</h4>
+          <h4 class="lb">Label Swab Envelopes:</h4>
+          <p>The information must be filled out completely for test to be accurate.</p>
+        </div>
 
-      <div class="step three">
-        <h4>Step 3.</h4>
-        <h4 class="lb">Place Applicator in Sample Envelope:</h4>
-        <p>Remove the applicator from mouth, and place it directly into the DNA Sample Envelope labeled for that person.</p>
-      </div>
+        <div class="step two">
+          <h4>Step 2.</h4>
+          <h4 class="lb">Collect DNA Samples:</h4>
+          <p>Simply rub the Sterile Polyester Tipped Applicators for 30 seconds inside the cheeks of the individual being tested.</p>
+        </div>
 
-      <div class="step four">
-        <h4>Step 4.</h4>
-        <h4 class="lb">Mail DNA Samples:</h4>
-        <p>Detach the Business Reply Envelope portion of the kit, and place all DNA Sample Envelopes inside. Seal the envelope securely, and place in mail. </p>
-      </div>
+        <div class="step three">
+          <h4>Step 3.</h4>
+          <h4 class="lb">Place Applicator in Envelope:</h4>
+          <p>Remove the applicator from mouth, and place it directly into the DNA Sample Envelope labeled for that person.</p>
+        </div>
 
+        <div class="step four">
+          <h4>Step 4.</h4>
+          <h4 class="lb">Mail DNA Samples:</h4>
+          <p>Detach Business Reply Envelope portion of the kit, and place all DNA Sample Envelopes inside. Seal the envelope, and place in mail. </p>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
