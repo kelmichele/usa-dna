@@ -478,40 +478,47 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			}
 		}
 
+		@media screen and (max-width: 1200px) {
+			.inner{width:95%;}
+		}
+
 		@include bp(tb) {
 			padding:30px;
-			.inner{width:90%;}
 			h1{font-size: 1.7em; margin-bottom: 0;}
 			.text{ width: 70%; margin-left: 0; }
 			h2 {font-size: 17px; margin-top: 10px;}
 			p{margin: 6px 0; font-size: 15px;}
+
+			.img {
+				&::before {height:125%; left:30px; top: -7%;}
+			}
 		}
 
 		@include bp(tn) {
 			padding:20px 50px 20px 30px;
+			@include sec-bgimage('ti3-mobile.png'); background-size: 25%; background-position: center right;
 			h1{font-size: 1.9em; margin-bottom: 15px;}
-			.text{ width: 70%; margin-left: 0; padding-right: 15px;margin-top: 15px;}
-			.img {margin-left:0; width:30%}
+			.text{ width: 75%; margin-left: 0; padding-right: 15px;margin-top: 15px;}
+			.img {display: none;}
 			h2 {font-size: 19px;}
 			p{font-size: 15px; margin: 0 0 10px;}
 		}
 
 		@include bp(pl) {
+			background-position: bottom right;
 			.text{margin-top: 0;}
 		}
 
 		@include bp(mb) {
+			padding:20px;
 			h1{font-size: 1.5em;}
 			h2{font-size: 17px;}
 			p {margin-bottom: 5px;}
-			padding:20px;
-			.img {width: 27%; }
 		}
 
-		@include bp(sm) {
+		@include bp(sm) {padding-bottom: 80px; background-size: 33%;
 			h1 {margin-bottom: 5px;}
 			.text{width: 100%; text-align: center;}
-			.img{float: right;}
 		}
 	}
 
@@ -641,16 +648,25 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 
 		@include bp(mb) {
 			.list li {font-size: 14px;}
-			.opt-block{padding:20px 10px 0; min-height: auto; float:none;
-				width: 48%; margin: 0 .8% 15px;
-				// width:60%; @include center-block();
+
+			.desc .js-filter{width:70%; @include center-block();}
+			.opt-block{padding:20px 10px 0; min-height: auto; @include sec-default(); margin-bottom:20px; border:1px solid rgba($dark, .1);
 				h3{font-size: 16px;}
 				.dets{margin-top: 8px;}
 				.register, .uk-button-default, .show {
 					width:75%; @include center-block(); margin: 8px auto;
 				}
 			}
+		}
 
+		@media screen and (max-width: 665px) {
+			.list {
+				li {width: 45%; margin-left:3%;}
+			}
+		}
+
+		@include bp(ph) {
+			.desc .js-filter{width:90%; }
 		}
 	}
 }
