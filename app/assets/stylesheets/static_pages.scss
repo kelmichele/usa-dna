@@ -607,22 +607,50 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 
 
 		@include bp(tb) {
+			padding:40px 0 20px;
 			.inner{width:94%;}
-			.list li {font-size: 15px;}
-			.desc{ width:74%;}
+			.list {@include sec-default(); text-align: center;
+				li {width: 30%; margin-left:3%; display: inline-block;font-size: 15px;}
+			}
+			.desc{ @include sec-default(); min-height:400px;}
 
-			.opt-block{width:48%; margin: 0 1% 30px;
+			.opt-block{min-height: 315px;
+				width:40%; margin: 0 0 30px 7%; padding: 30px 20px 0;
 				h3{font-size: 17px;}
-				p{font-size: 14px;}
+				p{font-size: 15px;}
 
-				.register, .uk-button-default, .show {
-					width:75%; margin: 5px 0 5px 12.5%;
-				}
+				.register, .uk-button-default, .show {font-size:14px; width:48%; margin: 0 1%;}
 			}
 		}
 
 		@include bp(nn) {
-			// .opt-block{width:85%; @include center-block();}
+			.opt-block{min-height: 345px;}
+		}
+
+		@include bp(tn) {
+			.inner{width:98%;}
+			.list li {margin: 0 1% 20px}
+			.opt-block{
+				width:45%; margin: 0 2% 20px; padding: 30px 20px 0;
+				h3{font-size: 17px;}
+				p{font-size: 15px;}
+
+				.register, .uk-button-default, .show {font-size:14px; width:48%; margin: 0 1%;}
+			}
+		}
+
+		@include bp(mb) {
+			.list li {font-size: 14px;}
+			.opt-block{padding:20px 10px 0; min-height: auto; float:none;
+				width: 48%; margin: 0 .8% 15px;
+				// width:60%; @include center-block();
+				h3{font-size: 16px;}
+				.dets{margin-top: 8px;}
+				.register, .uk-button-default, .show {
+					width:75%; @include center-block(); margin: 8px auto;
+				}
+			}
+
 		}
 	}
 }

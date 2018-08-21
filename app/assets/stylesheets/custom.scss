@@ -60,8 +60,10 @@ a:hover {text-decoration: none; opacity: .7;}
   visibility:hidden;
   background-color: $blue;
 
-  @include bp(tb) { left: 30px;visibility:visible; }
-  @include bp(sm) { left: 15px; }
+  @include bp(tb) { left: 20px;visibility:visible; }
+  @include bp(tn) { left: 6px; width: 25px; height: 25px;background-size: 75%;
+  }
+  // @include bp(sm) { left: 15px; }
 }
 .ft-block.menu li {margin-bottom: 10px;}
 
