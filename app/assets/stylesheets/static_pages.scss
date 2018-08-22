@@ -10,16 +10,14 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 .home .pg-body{
 	.breadcrumb {display: none;}
 	.hero-home { text-align:center;
-		@include sec-default(); background-color: white; padding-top: 45px; height:600px;
+		@include sec-default(); background-color: white; padding:0 20px;
+		@include sec-bgimage('baby-bear.jpg');height: 640px; background-position: bottom center;
 
-		// @include sec-bgimage('hero.jpg');background-position: left center;
-		@include sec-bgimage('ap2.jpeg');background-position: left center; height: 650px;
-
-		h1,h2,h3{font-weight: bold; text-shadow:1px 1px 1px rgba($blue, .7); margin-bottom: 0; font-family: $open;}
+		h1,h2,h3{font-weight: bold; text-shadow:1px 1px 1px rgba(black, .3); margin-bottom: 0; font-family: $open;}
 		h1 {margin: 0px;
-			text-transform: uppercase; color: $blue; font-size: 45px;}
-		h2 {font-size: 35px; }
-		h3 {font-size: 25px; }
+			text-transform: uppercase; color: $blue2; font-size: 40px;}
+		h2 {font-size: 29px; }
+		h3 {font-size: 30px; }
 
 		position: relative; z-index: 0;
 		&::before {@include before(); height: 15%; top:85%;
@@ -27,10 +25,12 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			background: linear-gradient(180deg, rgba(white, 0) 10%, rgba(white, .7) 55%, white 85%);
 		}
 
-		.wrap-new{width: 45%; float: right;
+		.wrap-new{width: 32%; float: right; margin-top: 12%;
 			.h1-img {width: 55%; @include center-block();}
-			h2,h3,a {color:white;}
-			h2 {margin-bottom: 20px; }
+			h1{margin-bottom: 0;}
+			h2,a {color:white;}
+			h2 {margin-bottom: 30px; line-height: 1em;text-shadow:1px 1px 1px rgba(black, .5);}
+			a, h3{color:darken($nteal, 3%); text-shadow:.5px .5px 1px rgba(darken($nteal, 25%), .65);}
 		}
 	}
 
@@ -851,18 +851,13 @@ $new: #ccd1d9;
 		}
 
 		@include bp(tb) {
-			.top {padding:35px 0 20px; text-align: center;
-				// @include sec-bgimage('flat-map.png'); background-position: bottom right; background-size: 20%;
-				h1 {font-size: 1.6em; margin-bottom: 5px;}
-				p {font-size: 15px;margin:10px 0;}
-				.one{ width: 55%;padding:0; margin-top: 35px;}
-				.two {width: 30%;}
-				.tests{font-size: 16px;}
-			}
-
-			.newlist {padding: 50px;
-				.states-dd {width: 65%;}
-				// .btn-secondary.dropdown-toggle {background-color: white;}
+			.newlist {padding: 50px; background-position: bottom right; background-size: 30%;
+				.cont{float:left; width:65%;}
+				.states-dd {width: 50%;}
+				h1{font-size: 1.9em;}
+				p{font-size: 16px;}
+				h2{font-size:17px;}
+				.btn-secondary.dropdown-toggle {font-size: 17px;}
 			}
 
 			.opt-block {padding:40px 0;
@@ -877,26 +872,23 @@ $new: #ccd1d9;
 		}
 
 		@include bp(tn) {
-			.top {
-				padding:30px 0 15px;
-				h1 {font-size: 1.35em;}
-				.inner {width: 90%;}
-				.one {width: 64%;}
-			}
-
-			.newlist {
-				padding:30px 0;
-				h2 {font-size: 18px;}
-				.btn-secondary.dropdown-toggle {font-size: 17px; background-color: white;}
+			.newlist {padding: 30px 0 45px; background-size: 20%;
+				.cont{width:75%; @include center-block();}
+				.states-dd {width: 50%;}
+				h1{font-size: 1.7em; }
+				hr.hlf {margin-top:5px;}
+				p{font-size: 15px;}
+				h2{font-size:16px;}
+				.btn-secondary.dropdown-toggle {font-size: 15px;}
 			}
 
 			.opt-block {padding:20px 0;
 				.inner {width: 90%;}
 				.one{width:70%; margin-left: 3%;}
 				.two {width: 25%; margin-left: 0;}
-				p{font-size: 15px;}
+				p{font-size: 15px; margin-bottom:5px;}
 
-				.tests {@include purple-btn(35%); background: darken($btn1, 25%); padding: 5px 15px; font-size: 15px;}
+				.tests {@include purple-btn(50%); background: darken($btn1, 25%); padding: 5px 25px; font-size: 15px;}
 			}
 
 			.call-block {padding:25px 0 5px;
@@ -906,43 +898,35 @@ $new: #ccd1d9;
 		}
 
 		@include bp(md) {
-			.top { padding:30px 0 25px;
-				.one{width: 90%; margin-top: 0; @include center-block(); padding:0;}
-				.two {display: none;}
-			}
 			.call-block h3 {font-size: 16px;}
 		}
 
 		@include bp(ph) {
-			.top { padding:25px 0 15px;
-				.one{width: 97%;}
-			}
-
 			.newlist {
 				padding:20px 0;
 				h2 {font-size: 16px;}
 				.btn-secondary.dropdown-toggle {font-size: 16px; }
-				.states-dd {width: 80%;}
+				.states-dd {width: 70%;}
 			}
 
 			.opt-block {
-				@include sec-bgimage('test-icon.png'); background-position: bottom right; background-size: 20%;
+				@include sec-bgimage('test-icon.png'); background-position: bottom left; background-size: 20%;
 				padding-bottom: 60px;
 				.one{width:90%;@include center-block(); margin-top:0;}
 				.two {display:none;}
 				.tests { padding: 5px 20px; font-size: 14px;}
 			}
 			.listing {width: 70%;}
+
+			.full-img{display:none;}
+			border-bottom:1px solid rgba($blue, .1);
 		}
 
 		@include bp(sm) {
-			.top {
-				.inner {width:94%;}
-				h1 {font-size: 1.2em;}
-				p{font-size: 14px;}
+			.newlist {background-image: none;
+				.cont {width:90%;}
+				.btn-secondary.dropdown-toggle {font-size: 15px; }
 			}
-
-			.newlist h2 {padding: 0 8px;}
 
 			.call-block .inner{width: 85%;}
 		}
