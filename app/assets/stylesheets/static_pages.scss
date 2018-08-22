@@ -10,10 +10,12 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 .home .pg-body{
 	.breadcrumb {display: none;}
 	.hero-home { text-align:center;
-		@include sec-default(); background-color: white; padding-top: 45px; height:700px;
-		@include sec-bgimage('hero.jpg');height:600px; background-position: left center;
+		@include sec-default(); background-color: white; padding-top: 45px; height:600px;
 
-		h1,h2,h3{font-weight: bold; text-shadow:0px 1px 1px rgba(black, .65); margin-bottom: 0; font-family: $open;}
+		// @include sec-bgimage('hero.jpg');background-position: left center;
+		@include sec-bgimage('ap2.jpeg');background-position: left center; height: 650px;
+
+		h1,h2,h3{font-weight: bold; text-shadow:1px 1px 1px rgba($blue, .7); margin-bottom: 0; font-family: $open;}
 		h1 {margin: 0px;
 			text-transform: uppercase; color: $blue; font-size: 45px;}
 		h2 {font-size: 35px; }
@@ -28,12 +30,11 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 		.wrap-new{width: 45%; float: right;
 			.h1-img {width: 55%; @include center-block();}
 			h2,h3,a {color:white;}
-			h2 {margin-bottom: 20px;}
+			h2 {margin-bottom: 20px; }
 		}
 	}
 
-	.dna-dos {@include sec-default(); background-color: white;
-		padding:100px 0; text-align: center;
+	.dna-dos {@include sec-default(); background-color: white; padding:100px 0; text-align: center;
 		h3{font-size: 28px; line-height: 1.5em; font-weight: bold;}
 		p{font-size: 24px; margin-bottom: 30px;}
 
@@ -45,14 +46,18 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 		.tb {width:55%; @include center-block(); position: relative; z-index: 5;}
 	}
 
-	.legal-lt {@include sec-default(); background-color: $f9; padding:60px 0 80px;
-		.left {@include sec-grid(left, 50%); margin-left: 8%; margin-top: 8%; }
-		.right {@include sec-grid(left, 30%); margin-left: 5%;}
-		padding:20px 0 0;
-		// .left {@include sec-grid(left, 40%); margin-left: 8%; margin-top: 35px;}
-		// .right {@include sec-grid(left, 47%); margin-left: 5%;}
+	.legal-lt {@include sec-default(); background-color: $f9;padding:20px 0 0;
 
-		.abs {position: absolute; width:35%; margin-top:-3.5%; right:0;}
+		.left {@include sec-grid(left, 50%); margin-left: 8%; margin-top: 2%; }
+		.right {@include sec-grid(left, 20%); margin-left: 8%;}
+
+
+		padding:0px 13%;
+		.inner {@include sec-default(); padding:60px 0 80px;
+			@include sec-bgimage('ball-glove.png');background-size: 22%; background-position: bottom right;
+		}
+		.left{margin-left:0; width: 65%; margin-top:0;}
+
 
 		p {font-size: 17px; margin-bottom:20px;
 			span {font-weight: 500;}
@@ -64,17 +69,11 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			background: -webkit-linear-gradient(-102deg, darken($blue, 15%) 19%, lighten($blue, 8%) 81%);
 			background: linear-gradient(12deg, darken($blue, 15%) 19%, lighten($blue, 8%) 81%);
 		}
-
-		// @include sec-bgimage('m39.png'); background-size: 45%;
-		// .left{float: right; margin-left: 0; width: 42%;}
-		// .right {float: none; margin-left:23%; width: 35%; margin-top: -13%;}
 	}
 
 	.call-block{
 		@include sec-default(); text-align: center;padding:$sec-pad;
-		// background: -webkit-linear-gradient(-300deg, darken($blue, 15%), $blue);
-		// background: linear-gradient(-300deg, darken($blue, 15%), $blue);
-		background-color: $teal;
+		background-color: darken($nteal, 5%);
 		h3{color: white; font-weight: bold; letter-spacing: 1px; font-size: 21px;}
 
 		.img-icon {width:120px; @include center-block();}
@@ -83,7 +82,7 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 		#number_link{color: white;}
 	}
 
-	.homekit { @include sec-default(); padding-bottom: 35px; background-color: white;
+	.homekit { @include sec-default();  background-color: white;
 		border-bottom: 15px solid $f6;
 		// padding:60px 0;
 		.left {@include sec-grid(left, 30%); margin-left: 10%; margin-top: -10%;}
@@ -105,15 +104,20 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 	@include bp(tb) {
 		.hero-home {height: 550px;}
 
-		.dna{background-size: 40%;
-			.right {@include sec-grid(right, 50%); margin-right:10%; padding: 70px 0;}
-			h3 {font-size: 18px}
+		.dna-dos {
+			padding: 50px 0;
+			.img-layer{ width: 90px;@include rotate(-20deg); margin-left:18%; margin-top: -3%;}
+			.tb {width:75%;}
+			h3{font-size: 24px;}
+			p{font-size: 21px; }
+			.link-a{font-size: 15px;}
 		}
 
-		.legal-lt {padding:45px 0 60px;
-			.left {@include sec-grid(left, 45%); margin-left: 0; margin-top: 15px;}
-			.right {margin-left: 0; float: right;}
-			.link-a {width: 50%; font-size: 16px;}
+		.legal-lt {
+			padding:0 10%;
+			.inner { padding:45px 0 60px;}
+			.left{width:75%;}
+			.link-a {width: 40%; font-size: 16px;}
 			h2{font-size: 19px;
 				span {font-size: 21px;}
 			}
@@ -140,16 +144,18 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			h3 {font-size: 21px;}
 		}
 
-		.dna{background-size: 40%;
-			.right {@include sec-grid(right, 55%); margin-right:5%; padding: 50px 0 65px;}
-			h3 {font-size: 16px}
-			.link-a {font-size: 15px; padding:10px 15px;}
+		.dna-dos {
+			padding: 50px 0;
+			.img-layer{ width: 80px; margin-left:16%;}
+			.tb {width:90%;}
+			h3{font-size: 21px;}
+			p{font-size: 18px; }
 		}
 
-		.legal-lt {padding:20px 0 15px;
-			.left {width: 75%; @include center-block(); text-align: center;}
-			.right {@include center-block();}
-			.link-a {width: 40%;@include center-block(); font-size: 15px; padding:6px 10px;}
+		.legal-lt {
+			padding:0 5%;
+			.inner { padding:45px 0 60px;}
+			.link-a { font-size: 15px; padding: 10px;}
 			h2{font-size: 17px; margin-bottom: 0;
 				span {font-size: 19px;}
 			}
@@ -172,17 +178,6 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 	@include bp(md) {
 		.hero-home {height: 300px; }
 
-		.dna{background-size: 30%; background-position: left top;
-			.right {@include sec-grid(right, 60%); padding: 30px 0 40px; text-align: left;}
-			h3 {font-size: 16px}
-			.link-a {font-size: 15px; padding:10px 15px;}
-		}
-
-		.legal-lt {padding:10px 0 25px;
-			.left {width: 75%; @include center-block(); text-align: center;}
-			.right {display: none;}
-		}
-
 		.homekit {padding-bottom: 0px;
 			.left {width: 30%; margin-top: -6%; margin-left:0;}
 			.right {margin-left: 3%; width: 65%;}
@@ -197,10 +192,13 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			&::after{@include before(); background-color: rgba($dark, .3); z-index: -2}
 		}
 
-		.dna{background-size: 25%; background-position: bottom right;
-			.right {@include sec-grid(left, 75%); }
-			h3 {font-size: 15px}
-			.link-a {font-size: 14px; padding:6px 15px;}
+		.dna-dos {
+			padding: 35px 0 50px;
+			.img-layer{ width: 60px; margin-left:8.5%; margin-top:-2.5%;opacity: .3}
+			.tb {@include sec-default();}
+			h3{font-size: 19px; }
+			p{font-size: 16px; margin-top:0px; }
+			.link-a {font-size: 14px;}
 		}
 
 		.call-block {padding:15px 0 6px;
@@ -208,7 +206,10 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			h3 {font-size: 16px;}
 		}
 
-		.legal-lt .left {width: 98%;}
+		.legal-lt {
+			.inner {padding:30px 0 40px;}
+			.left {width: 80%;}
+		}
 
 		.homekit {padding: 10px 0;
 			.inner {width: 90%;}
@@ -221,7 +222,6 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 
 	@include bp(ph) {
 		.hero-home {height:200px;
-			// background-position: top left;
 			&::after{background-color: rgba($dark, .45);}
 			.wrap{@include sec-default(); }
 			h1,h2,h3{text-shadow:0px 0px 1px rgba(black, .9);}
@@ -235,13 +235,30 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 			.right {@include sec-grid(left, 95%); padding: 20px 0;}
 		}
 		.call-block br.uno{display: none;}
-		.legal-lt .inner{width: 90%;}
+
+		.legal-lt {
+			.inner {background-size: 20%; padding-bottom:100px;}
+			.left{@include sec-default();}
+		}
 
 		.homekit {padding: 10px 0;
 			@include sec-bgimage('test-kit-mob.png'); background-size: 33%; background-position: bottom right; padding-bottom:80px;
 			.left {display: none;}
 			.right {float: left; width: 95%;}
 			h2 {font-size: 17px}
+		}
+	}
+
+	@include bp(sm) {
+		.legal-lt {
+			.inner {background-size: 25%; padding-bottom:100px;}
+		}
+
+		.dna-dos {
+			padding: 25px 0 30px;
+			.img-layer{ width: 45px; margin-left:-10px; }
+			h3{font-size: 19px; margin-bottom:5px; }
+			p{font-size: 15px; }
 		}
 	}
 }
@@ -337,7 +354,7 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 		@include bp(tn) {
 			.inner {width: 90%; text-align: center;}
 			.left{width: 63%; margin-left: 0; }
-			.right{width:25%; padding:0; margin-top: -8%;}
+			.right{width:20%; padding:0; margin-top: -8%;}
 
 			.pricing, .call {
 				h3 {font-size: 16px;
@@ -348,6 +365,7 @@ hr.hlf {width:25%; @include center-block(); border-top:1px solid #ddd;}
 				p.call-add {font-size:15px;
 					a {font-size: 17px;}
 				}
+				.stripe-button-el { width: 65%;}
 			}
 		}
 
@@ -658,9 +676,11 @@ $new: #ccd1d9;
 		.f1 {@include sec-default(); padding-top:25px; margin-top:15px; border-top: 1px solid rgba($new, .3);}
 		.fa {color: $red;}
 
-		&.reg{padding:25px 0 0;
+		&.reg{
 			h1{margin-bottom: 5px;}
-			.f3 {margin-top: 40px;}
+			.inner{width: 85%; }
+			.f2, .f3{margin-left: 0;}
+			.f3{width: 60%; float:right; margin-top:0;}
 		}
 
 		&.rev {	background-color: $f9;
@@ -668,10 +688,11 @@ $new: #ccd1d9;
 		}
 
 		@include bp(dt) {
-			padding: 75px 0;
-			.inner{width: 75%; }
-			.f2,.f3{ margin-left: 5%;}
-			.f3 { width: 55%; }
+			&.rev {padding: 75px 0;
+				.inner{width: 75%; }
+				.f2,.f3{ margin-left: 5%;}
+				.f3 { width: 55%; }
+			}
 		}
 
 		@include bp(tb) {
@@ -693,10 +714,11 @@ $new: #ccd1d9;
 			.f1 {padding-top:15px; margin-top: 7px;}
 			.f3 { width:70%; padding: 0 15px;}
 
-
-			&.reg {
-				.f2 {width:30%; padding: 0 5px ; margin-top: 5%;}
-				.f3{padding: 0 20px;}
+			&.reg{
+				padding: 30px 5% 0;
+				.inner{@include sec-default();@include sec-bgimage('baby-girl.png'); background-position: bottom left; background-size: 20%; padding-bottom:135px;}
+				.f2 {display:none;}
+				.f3{@include sec-default();}
 			}
 
 			&.rev {
@@ -705,14 +727,25 @@ $new: #ccd1d9;
 		}
 
 		@include bp(mb) {
-			&.reg, &.rev {
+			&.reg{
+				.inner{ background-size: 24%; padding-bottom:135px;}
+			}
+
+			&.rev {
 				.f2{width: 23%; margin-top:7%;}
 				.f3 {width: 76%; margin-left: 0; padding: 0 15px;}
 			}
 		}
 
 		@include bp(sm) {
-			&.reg, &.rev {
+			&.reg{padding-top:20px;
+				h1{font-size: 24px;}
+				p{font-size:14px;}
+				.inner{ background-size: 24%; padding-bottom:90px;}
+				.f1{margin-top:0;}
+			}
+
+			&.rev {
 				.f2{width: 30%; @include center-block(); margin-top:0; padding: 0;}
 				.f3 {width: 95%; @include center-block(); }
 			}
