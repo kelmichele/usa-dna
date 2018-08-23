@@ -1,16 +1,25 @@
+<div class="ftcall-block">
+  <div class="inner">
+    <p>Call us today if you have any questions,
+    or if you would like to schedule a DNA/Paternity Test.</p>
+    <h4><a href="tel:18662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a></h4>
+  </div>
+</div>
+
 <div class="clearfix"></div>
 <footer class="site-footer">
   <div class="inner-ft">
-    <div class="ft-block contact">
+    <!-- <div class="ft-block contact">
       <h4>Contact Us</h4>
       <p class="ft-phone">
         <a href="tel:18662125426" id="number_link" onclick="ga('send', 'event', 'Phone Number', 'Clicked to Call', 'Number on Website', '1');">1 (866) 212-5426</a>
       </p>
       <p>Call us if you have any questions about testing, or would like to schedule a DNA/Paternity testing.</p>
-    </div>
+    </div> -->
 
     <div class="ft-block menu">
-      <h4>Menu</h4>
+      <!-- <h4>Menu</h4> -->
+      <div class="logo-block"><%= link_to(image_tag( 'usadna-logo.png', alt: 'USA DNA Testing logo', class: 'img-responsive logo'), root_path ) %></div>
       <ul class="ft-menu">
         <%= render 'layouts/nav' %>
       </ul>

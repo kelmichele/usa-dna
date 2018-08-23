@@ -73,52 +73,97 @@ a:hover {text-decoration: none; opacity: .7;}
 
 .breadcrumb {text-transform: capitalize; margin-top:0; color: $gray; background-color: transparent;}
 
-.site-footer { @include sec-default(); background-color: white; padding-top: 20px;
-  h4 {font-weight: bold; color: $dk-blue; font-size: 18px; letter-spacing: 1px;}
-  p.ft-phone{font-weight: bold;}
-  .inner-ft {width:85%; @include center-block();}
-  .ft-final {@include sec-default();}
-  .ft-block {@include grid3(); padding: 10px 15px;
-    &.menu {margin-left:5%; }
-    &.menu, &.contact{width: 25%; }
-    &.cancel{float: right; width: 45%; padding:10px 0; }
 
+.ftcall-block {@include sec-default();
+  padding: 30px; text-align: center;
+  background: -webkit-linear-gradient(-200deg, darken($nteal, 10%), $nteal);
+  background: linear-gradient(-200deg, darken($nteal, 10%), $nteal);
+  .inner {width: 55%; @include center-block();}
+  p {color: white; font-size: 22px; font-weight: 600; font-family: $open;  margin-bottom: 0;}
+  h4 {font-size: 25px; font-weight: bold; margin-top: 5px;}
+  #number_link{color: $blue2; text-shadow: 0px 1px 1px white;font-family: $open;}
+
+  @include bp(dt) {.inner {width: 45%; }}
+  @include bp(tb) {padding: 20px 30px 15px;
+    p {font-size: 19px;}
+    h4{font-size: 22px;}
+  }
+  @include bp(tn) {
+    padding: 20px 20px 10px;
+    .inner {width: 75%;}
+    p {font-size: 18px;}
+    h4 {font-size: 20px;}
+  }
+  @include bp(oc) {
+    padding: 15px 20px 10px;
+    .inner {width: 98%;}
+    p {font-size: 16px;}
+    h4 {font-size: 18px;}
+  }
+  @include bp(sm) {
+    padding: 15px 10px 10px;
+    .inner {width: 99%;}
+    p {font-size: 15px;}
+    h4 {font-size: 17px;}
+  }
+}
+
+.site-footer { @include sec-default(); background-color: white; padding-top: 20px;
+  h4 {font-weight: bold; color: $dk-blue; font-size: 16px; letter-spacing: .5px; margin-bottom: 0; margin-top: 10px;}
+  .inner-ft {width:90%; @include center-block();}
+  .ft-final {@include sec-default();}
+  .ft-block {display: inline-block; float: left; width: 49%;
+    &.cancel {float: right;
+      p{font-size: 14px; margin-top: 7px;}
+    }
+
+    .logo-block{width:275px; margin-bottom: 15px;}
+
+    li {display: inline-block;
+      position: relative; z-index: 1;
+      &::before {@include before(); width:5px; height:5px; border-radius: 50%; top:44%; left:-5%; background-color: $blue2;}
+      a {font-size: 15px;padding: 0 12px;}
+
+      &:first-child {margin-left: 0;
+        &::before{display: none;}
+      }
+    }
     li.ft-only {display: none;}
     li.ft-only.mfl {display: block; }
   }
 
   .copy {@include sec-default(); text-align: center; padding: 5px 0; background-color: $blue; margin-bottom: 0; color: white;}
 
+  @include bp(dt) {
+    .inner-ft {width:85%;}
+    .ft-block {width:45%;}
+  }
+
   @include bp(tb) {
-    text-align: center;
-    .inner-ft {width: 92%;}
-    .ft-block {padding: 10px 0px;
-      &.contact, &.menu {width: 20%; margin: 0 2% 0 0;}
-      &.contact {width: 30%;}
-      &.cancel { width: 45%; margin:0;}
-
-      p{font-size: 15px;}
-    }
-  }
-
-  @include bp(tn) {
     .ft-block{
-      &.menu {display: none;}
-      &.contact{width: 38%; margin-right: 0;}
-      &.cancel {width: 60%;}
-    }
-    p{font-size:15px;}
-  }
-
-  @include bp(tn) {
-    .ft-block{
-      &.contact, &.cancel {width:95%; @include center-block();
-        h4 {margin-bottom: 0;}
-        p {margin: 5px 0;}
+      &.menu, &.cancel {@include sec-default(); text-align: center;
+        .logo-block, .ft-menu {@include center-block(); width:auto;}
+        .logo{width: 200px; @include center-block();}
+        .ft-menu {border-bottom: 1px solid rgba($dark, .1); padding-bottom: 8px;}
+        h4{margin-top: 0}
       }
-      // &.cancel {width: 95%; @include center-block();}
     }
   }
+
+  @include bp(tn) {
+    .inner-ft {width:95%;}
+    .ft-block {
+      li a {font-size: 14px;}
+    }
+  }
+
+  @include bp(ph) {
+    .ft-block{
+      &.menu .ft-menu {display: none;}
+      h4 {font-size: 15px;}
+    }
+  }
+
 }
 
 .msg-bx {@include sec-default();
